@@ -91,6 +91,7 @@ header .wrapper .login button {
   border-radius: 1rem;
   outline: none;
   background: #343b41;
+  outline: none;
 }
 
 @media (max-width: 768px) {
