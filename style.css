@@ -15,16 +15,22 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 4rem;
-  box-shadow: 0 3px 3px #f0f0f0;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 8px;
+}
+
+header.header-event {
+  z-index: 1;
+  position: fixed;
+  top: -80px;
 }
 
 header .wrapper {
-  padding-left: 1rem;
-  padding-right: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
   width: 1200px;
   height: 4rem;
 }
@@ -57,11 +63,11 @@ header .wrapper .brand .icon {
 }
 
 header .wrapper .brand .icon svg path:first-child {
-  fill: #6E5EFF;
+  fill: #6e5eff;
 }
 
 header .wrapper .brand .title {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   padding-left: 16px;
   font-weight: bold;
   color: #343b41;
@@ -89,9 +95,9 @@ header .wrapper .login button {
   color: white;
   cursor: pointer;
   border-radius: 1rem;
+  border: none;
   outline: none;
   background: #343b41;
-  border: none;
 }
 
 @media (max-width: 768px) {
@@ -208,13 +214,18 @@ header .wrapper .login:hover {
   }
 }
 
+#main-page .container .profile .sns-icon {
+  display: flex;
+}
+
 @media (max-width: 768px) {
   #main-page .container .profile .sns-icon {
     margin-left: 1rem;
   }
 }
 
-#main-page .container .profile .sns-icon .github-icon {
+#main-page .container .profile .sns-icon a {
+  display: block;
   text-decoration: none;
 }
 
@@ -231,7 +242,6 @@ header .wrapper .login:hover {
 
 #main-page .container .profile .sns-icon .naver-icon {
   margin-left: 1rem;
-  text-decoration: none;
 }
 
 #main-page .container .profile .sns-icon .naver-icon svg {
@@ -247,7 +257,6 @@ header .wrapper .login:hover {
 
 #main-page .container .profile .sns-icon .email-icon {
   margin-left: 1rem;
-  text-decoration: none;
 }
 
 #main-page .container .profile .sns-icon .email-icon svg {
@@ -290,10 +299,11 @@ header .wrapper .login:hover {
   }
 }
 
-#main-page .container .contents .wrapper li {
+#main-page .container .contents .wrapper a {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   font-size: 1.325rem;
   width: 8rem;
   height: 3rem;
@@ -304,7 +314,7 @@ header .wrapper .login:hover {
 }
 
 @media (max-width: 768px) {
-  #main-page .container .contents .wrapper li {
+  #main-page .container .contents .wrapper a {
     font-size: 1rem;
     height: 2.5rem;
     flex: 1 1 0%;
@@ -316,7 +326,7 @@ header .wrapper .login:hover {
   height: 2px;
   position: absolute;
   bottom: -2px;
-  background: #6E5EFF;
+  background: #6e5eff;
 }
 
 @media (max-width: 768px) {
@@ -379,7 +389,7 @@ header .wrapper .login:hover {
   display: inline-flex;
   align-items: center;
   margin-right: 0.875rem;
-  color: #6E5EFF;
+  color: #6e5eff;
   font-weight: 500;
   font-size: 1rem;
   background: #f1f3f5;

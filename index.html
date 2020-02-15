@@ -103,29 +103,28 @@
         <!-- post -->
         <div class="post">
           <div class="wrapper">
-            <a href=""><h2>첫번째 글</h2></a>
-            <p>안녕하세요! 테스트 문구 입니다.</p>
+            <a href=""><h2>야발</h2></a>
+            <p><%= post %></p>
             <div class="tags-wrapper">
               <a href="">twit</a>
             </div>
             <div class="subinfo">
-              <span>2020년 2월 12일</span>
+              <span>2020년 2월 14일</span>
               <div class="separator">·</div>
               <span>2개의 댓글</span>
             </div>
             <div class="post-separator"></div>
           </div>
-        </div>
-        <div class="post">
           <div class="wrapper">
-            <a href=""><h2>두번째 글</h2></a>
-            <p>안녕하세요! 테스트 문구 입니다.</p>
+            <a href=""><h2>소난다..</h2></a>
+            <p><%= post %></p>
             <div class="tags-wrapper">
               <a href="">twit</a>
               <a href="">facebook</a>
+              <a href="">dcinside</a>
             </div>
             <div class="subinfo">
-              <span>2020년 2월 13일</span>
+              <span>2020년 2월 14일</span>
               <div class="separator">·</div>
               <span>2개의 댓글</span>
             </div>
@@ -134,5 +133,63 @@
         </div>
       </div>
     </section>
+    <script>
+      let topInc = -80;
+
+      window.addEventListener("mousewheel", e => {
+        const maxClamp = (min, max, val) => {
+          const result = Math.min(Math.max(min, +val), max);
+          if (topInc > 0) {
+            topInc = 0;
+          }
+          return result;
+        };
+
+        const minClamp = (min, max, val) => {
+          const result = Math.min(Math.max(min, +val), max);
+          if (topInc < -80) {
+            topInc = -80;
+          }
+          return result;
+        };
+
+        const headerElem = document.querySelector("#header");
+        const mainPageElem = document.querySelector("#main-page");
+
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          if (e.wheelDelta >= 0) {
+            topInc += 8;
+            headerElem.style.top = `${maxClamp(-80, topInc, 0)}px`;
+          } else {
+            topInc -= 8;
+            headerElem.style.top = `${minClamp(-80, topInc, 0)}px`;
+          }
+
+          if (window.pageYOffset >= 65) {
+            headerElem.classList.add("header-event");
+            mainPageElem.style.marginTop = "9.375em";
+          } else if (window.pageYOffset === 0) {
+            headerElem.classList.remove("header-event");
+            mainPageElem.style.marginTop = "5.625rem";
+          }
+        } else {
+          if (e.wheelDelta >= 0) {
+            topInc += 4;
+            headerElem.style.top = `${maxClamp(-80, topInc, 0)}px`;
+          } else {
+            topInc -= 4;
+            headerElem.style.top = `${minClamp(-80, topInc, 0)}px`;
+          }
+
+          if (window.pageYOffset >= 55) {
+            headerElem.classList.add("header-event");
+            mainPageElem.style.marginTop = "6.25rem";
+          } else if (window.pageYOffset === 0) {
+            headerElem.classList.remove("header-event");
+            mainPageElem.style.marginTop = "3rem";
+          }
+        }
+      });
+    </script>
   </body>
 </html>
