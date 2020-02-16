@@ -25,7 +25,6 @@ header.header-event {
   position: fixed;
   top: -80px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 8px;
-  -webkit-backface-visibility: hidden;
 }
 
 header .wrapper {
