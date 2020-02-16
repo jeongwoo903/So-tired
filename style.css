@@ -13,22 +13,26 @@ body {
 header {
   display: flex;
   align-items: center;
+  -webkit-box-align: center;
   justify-content: center;
+  -webkit-justify-content: center;
   width: 100%;
   background: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 8px;
 }
 
 header.header-event {
   z-index: 1;
   position: fixed;
   top: -80px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 8px;
+  -webkit-backface-visibility: hidden;
 }
 
 header .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  -webkit-box-pack: justify;
   padding-left: 1rem;
   padding-right: 1rem;
   width: 1200px;
@@ -302,7 +306,9 @@ header .wrapper .login:hover {
 #main-page .container .contents .wrapper a {
   display: flex;
   align-items: center;
+  -webkit-box-align: center;
   justify-content: center;
+  -webkit-justify-content: center;
   text-decoration: none;
   font-size: 1.325rem;
   width: 8rem;
