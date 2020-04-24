@@ -11,9 +11,14 @@ body {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
   align-items: center;
   -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   -webkit-justify-content: center;
   width: 100%;
@@ -24,12 +29,18 @@ header.header-event {
   z-index: 1;
   position: fixed;
   top: -80px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 8px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 8px;
 }
 
 header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-box-pack: justify;
   padding-left: 1rem;
@@ -57,7 +68,11 @@ header .wrapper {
 }
 
 header .wrapper .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -85,6 +100,7 @@ header .wrapper .brand .title {
 }
 
 header .wrapper .login {
+  -webkit-transition: all 0.125s ease-in 0s;
   transition: all 0.125s ease-in 0s;
   opacity: 1;
 }
@@ -142,13 +158,19 @@ header .wrapper .login:hover {
 }
 
 #main-page .container .profile .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 @media (max-width: 768px) {
   #main-page .container .profile .wrapper {
     display: block;
+    -webkit-box-align: unset;
+    -ms-flex-align: unset;
     align-items: unset;
   }
 }
@@ -156,7 +178,9 @@ header .wrapper .login:hover {
 #main-page .container .profile .wrapper img {
   width: 8rem;
   height: 8rem;
+  -o-object-fit: cover;
   object-fit: cover;
+  -webkit-box-shadow: black 0px 0px 4px 0px;
   box-shadow: black 0px 0px 4px 0px;
   border-radius: 50%;
 }
@@ -218,6 +242,8 @@ header .wrapper .login:hover {
 }
 
 #main-page .container .profile .sns-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -277,7 +303,11 @@ header .wrapper .login:hover {
   color: red;
   margin-top: 4.5rem;
   margin-bottom: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: relative;
 }
@@ -290,7 +320,11 @@ header .wrapper .login:hover {
 }
 
 #main-page .container .contents .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   list-style: none;
   padding: 0;
@@ -303,9 +337,14 @@ header .wrapper .login:hover {
 }
 
 #main-page .container .contents .wrapper a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
   align-items: center;
   -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   -webkit-justify-content: center;
   text-decoration: none;
@@ -322,6 +361,8 @@ header .wrapper .login:hover {
   #main-page .container .contents .wrapper a {
     font-size: 1rem;
     height: 2.5rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 0%;
     flex: 1 1 0%;
   }
 }
@@ -357,9 +398,13 @@ header .wrapper .login:hover {
   margin: 0px;
   display: block;
   font-size: 1.5rem;
+  -webkit-margin-before: 0.83em;
   margin-block-start: 0.83em;
+  -webkit-margin-after: 0.83em;
   margin-block-end: 0.83em;
+  -webkit-margin-start: 0px;
   margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
 }
@@ -391,7 +436,11 @@ header .wrapper .login:hover {
   padding-left: 1rem;
   padding-right: 1rem;
   height: 2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-right: 0.875rem;
   color: #6e5eff;
@@ -414,7 +463,11 @@ header .wrapper .login:hover {
 }
 
 #main-page .container .post .wrapper .subinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 1rem;
   color: #868e96;
